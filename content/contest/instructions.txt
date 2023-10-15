@@ -1,0 +1,30 @@
+Compilation:
+1. mkdir WF
+2. vi .bashrc
+3. Add the line: export PATH="$PATH:$HOME/WF"
+4. cd WF && vi cf.sh -> Write the compilation commands
+5. mv cf.sh cf && chmod +x cf
+6. Restart terminal
+
+Kate:
+1. Theme: Settings->Configure Kate->Color Themes
+2. Vim mode: Settings->Configure Kate->Editing->Default input mode.
+   Then Vi Input mode->Insert mode->jk = <esc>
+3. Word wrap: Settings->Configure Kate->Appearance->Turn off dynamic w.w.
+4. Terminal: Make sure View->Tool Views->Show sidebars is on. Go to
+   Settings->Configure Kate->Terminal and turn off Hide Konsole.
+5. Hotkey for terminal: Change Focus Terminal Panel to F4. Click "Reassign"
+   when it says it collides with Show Terminal Panel.
+
+Fast Compile, Template, Debug:
+1. cd WF && mkdir bits
+2. Insert stdc++.h
+3. Compile using the flags of cf.sh
+4. cd .. and write template.cpp
+
+Windows:
+1. Using cmd: echo %PATH%. Using Powershell: echo $env:PATH
+2. Add path using cmd: set PATH=%PATH%;C:\Program Files\CodeBlocks\MinGW\bin
+   It should be the directory where g++ is.
+3. If we're using g++ of CodeBlocks, fsanitize won't be available :(
+4. Write cf.bat at some directory. Ensure that directory is in PATH.
