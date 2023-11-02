@@ -9,11 +9,6 @@
  * Status: Tested
  */
 
-/*
- * Author: 
- * Description: 
- */
-
 const int L = 5000; // Total no of characters
 const int A = 10; // Alphabet size
 
