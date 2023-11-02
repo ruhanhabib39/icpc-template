@@ -1,6 +1,12 @@
 /**
  * Author: Arman Ferdous
+ * Date:
+ * License:
+ * Source:
  * Description: Hashing with point updates on string (0-indexed). upd function adds c_add to the pos (0-indexed) th character.
+ * Usage:
+ * Time: 
+ * Status: Tested
  */
 
 template<const int M, const int B> struct Dynamic_Hashing {
