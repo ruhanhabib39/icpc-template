@@ -3,7 +3,7 @@
  * Date:
  * License: 
  * Source: Self work
- * Description: Given weighted graph \texttt{g} with nodes $\in [1,n]$, makes a new binary tree \texttt{T} with nodes $\in [0,$\texttt{nnode}$)$ such that distance is maintained. Adds at-most $2(N-1)$ nodes (actually much less than that). Only call \texttt{build(n)}, and $g$ must have $(w,v)$ pairs.
+ * Description: Given weighted graph \texttt{g} with nodes $\in [1,n]$, makes a new binary tree \texttt{T} with nodes $\in [1,$\texttt{nnode}$)$ such that distance is maintained. Adds at-most $2(N-1)$ nodes (actually much less than that).$g$ must have $(w,v)$ pairs.
  * Time: 
  * Status: Tested
  */
