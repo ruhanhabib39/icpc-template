@@ -1,6 +1,11 @@
 /**
  * Author: Arman Ferdous
+ * Date:
+ * License:
+ * Source:
+ * Description: 
  * Usage: Call hashing on a 0-indexed string. eval intervals are [l, r]. Shouldn't overflow with given mods.
+ * Time: 
  * Status: Tested
  */
 
