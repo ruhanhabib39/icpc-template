@@ -1,6 +1,17 @@
-/*
+/**
  * Author: Arman Ferdous
- * Description: insert strings first (0-indexed). Then call prepare to use everything. link = suffix link. to[ch] = trie transition. jump[ch] = aho transition to ch using links.
+ * Date:
+ * License:
+ * Source: 
+ * Description: 
+ * Usage: insert strings first (0-indexed). Then call prepare to use everything. link = suffix link. to[ch] = trie transition. jump[ch] = aho transition to ch using links.
+ * Time: $\mathcal{O}(AL)$
+ * Status: Tested
+ */
+
+/*
+ * Author: 
+ * Description: 
  */
 
 const int L = 5000; // Total no of characters
