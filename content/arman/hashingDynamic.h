@@ -2,10 +2,10 @@
  * Author: Arman Ferdous
  * Date:
  * License:
- * Source:
- * Description: Hashing with point updates on string (0-indexed). upd function adds c_add to the pos (0-indexed) th character.
- * Usage:
- * Time: 
+ * Source: Arman
+ * Description: Hashing with point updates on string (0-indexed).
+ * Usage: upd function adds c_add to the pos (0-indexed) th character.
+ * Time: $O(n \log n)$
  * Status: Tested
  */
 
@@ -27,10 +27,12 @@ template<const int M, const int B> struct Dynamic_Hashing {
     for (int i = 1; i <= n; ++i) pw[i] = (pw[i-1] * 1LL * B) % M;
     for (int i = 0; i < n; ++i) upd(i, s[i]);
   }
+  // [l, r]
   ll eval(int l, int r) { assert(l <= r);
     return (get(r) - ((get(l-1) * 1LL * pw[r-l+1]) % M) + M) % M;
   }
 };
+
 
 struct Double_Dynamic {
   using DH1 = Dynamic_Hashing<916969619, 571>;
@@ -44,14 +46,3 @@ struct Double_Dynamic {
   pll eval(int l, int r) { return {h1.eval(l,r), h2.eval(l,r)}; }
 };
 
-/*
- * upd(pos, c_add):
- * adds c_add to the pos-th character.          *
- * if you want to change s[i] into a new character ch
- * you need to call upd(i, ch - s[i])
-
- * get(pos):
- * returns the hash value of the prefix upto pos
- *
- * Code can be used with/without Double_Dynamic
- */
