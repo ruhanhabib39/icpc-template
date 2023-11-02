@@ -3,23 +3,22 @@
  * Date:
  * License: 
  * Source: https://cp-algorithms.com/geometry/convex_hull_trick.html
- * Description: Li-Chao Tree, get minimum. 0-based indexing, [l, r)
+ * Description: Li-Chao Tree, get minimum. range-> [0, n), 0-based indexing, [l, r)
  * Time: $O(n \log n)$
  * Status: Untested
  */
 
 template<class T>
 struct LiChao {
-  using ftype = T;
-  using point = complex<ftype>;
+  using point = complex<T>;
   
   const T inf = numeric_limits<T>::max();
 
-  static ftype dot(point a, point b) {
+  static T dot(point a, point b) {
     return (cong(a) * b).real();
   }
 
-  static ftype f(point a, point x) {
+  static T f(point a, T x) {
     return dot(a, {x, 1});
   }
 
