@@ -3,7 +3,7 @@
  * Date: 
  * License: 
  * Source: CP algo
- * Description: Half plane intersection in O(n log n). The direction of the plane is ccw of pq vector in Halfplane struct.
+ * Description: Half plane intersection in O(n log n). The direction of the plane is ccw of pq vector in Halfplane struct. \vspace{3mm}
  * Usage:
  * Status:
  */
