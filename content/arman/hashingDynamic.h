@@ -9,14 +9,18 @@
  * Status: Tested
  */
 
-template<const int M, const int B> struct Dynamic_Hashing {
-  int n; V<ll> h, pw;
+#define sz(s) size( s )
+
+using ll = long long;
+
+template<const ll M, const ll B> struct Dynamic_Hashing {
+  int n; vector<ll> h, pw;
 
   void upd(int pos, int c_add) {
     for (int i = ++pos; i <= n; i += i&-i)
       h[i] = (h[i] + c_add * 1LL * pw[i - pos]) % M;
   }
-  int get(int pos, int r = 0) {
+  ll get(int pos, int r = 0) {
     for (int i = ++pos, j = 0; i; i -= i&-i) {
       r = (r + h[i] * 1LL * pw[j]) % M;
       j += i&-i;

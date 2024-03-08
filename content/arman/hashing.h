@@ -9,16 +9,20 @@
  * Status: Tested
  */
 
-template<const int M, const int B> struct Hashing {
-  int n; V<int> h, pw;
+#define sz(s) size( s )
+
+using ll = long long;
+
+template<const ll M, const ll B> struct Hashing {
+  int n; vector<ll> h, pw;
   Hashing(const string &s) : n(sz(s)), h(n+1), pw(n+1) {
     pw[0] = 1; // ^^ s is 0 indexed
     for (int i = 1; i <= n; ++i)
-      pw[i] = (pw[i-1] * 1LL * B) % M,
-      h[i] = (h[i-1] * 1LL * B + s[i-1]) % M;
+      pw[i] = (pw[i-1] * B) % M,
+      h[i] = (h[i-1] * B + s[i-1]) % M;
   }
-  int eval(int l, int r) { assert(l <= r); // [l, r]
-    return (h[r+1] - ((h[l] * 1LL * pw[r-l+1]) % M) + M) % M;
+  ll eval(int l, int r) { assert(l <= r); // [l, r]
+    return (h[r+1] - ((h[l] * pw[r-l+1]) % M) + M) % M;
   }
 };
 
