@@ -1,7 +1,7 @@
 \chapter{Number theory}
 
 \section{Modular arithmetic}
-	\kactlimport{ModularArithmetic.h}
+%	\kactlimport{ModularArithmetic.h}
 	\kactlimport{ModInverse.h}
 	\kactlimport{ModPow.h}
 	\kactlimport{ModLog.h}
@@ -51,7 +51,7 @@
 
 \section{Mobius Function}
 \[
-	\mu(n) = \begin{cases} 0 & n \textrm{ is not square free}\\ 1 & n \textrm{ has even number of prime factors}\\ -1 & n \textrm{ has odd number of prime factors}\\\end{cases}
+	\mu(n) = \begin{cases} 0 & \textrm{not square free}\\ 1 & \textrm{even number of prime factors}\\ -1 & \textrm{odd number of prime factors}\\\end{cases}
 \]
   Mobius Inversion:
   \[ g(n) = \sum_{d|n} f(d) \Leftrightarrow f(n) = \sum_{d|n} \mu(d)g(n/d) \]
